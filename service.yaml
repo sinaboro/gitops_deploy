@@ -6,7 +6,7 @@ metadata:
     service.beta.kubernetes.io/aws-load-balancer-type: "nlb"
     service.beta.kubernetes.io/aws-load-balancer-backend-protocol: tcp
     service.beta.kubernetes.io/aws-load-balancer-ssl-ports: "443"
-    service.beta.kubernetes.io/aws-load-balancer-ssl-cert: arn:aws:elasticloadbalancing:ap-northeast-2:285695286387:loadbalancer/net/a46d7e26ae2a14d5186fb0bb3607f9d3/4d1f698a04432f77
+    service.beta.kubernetes.io/aws-load-balancer-ssl-cert: 285695286387.dkr.ecr.ap-northeast-2.amazonaws.com/k8s-cluster-repo:v1.0
 spec:
   selector:
     app: frontend-nginx
@@ -20,6 +20,7 @@ spec:
     port: 443
     targetPort: 80
   type: LoadBalancer
+
 
 
 
